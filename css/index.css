@@ -64,31 +64,41 @@ header #branding h1{
 
 /* Content*/
 
-.row:after {
+.row:after{
     content: "";
     display: table;
     clear: both;
 }
 
-.column {
+.column{
     float: left;
     width: 33,3%;
-    padding: 5px;
+    padding: 10px;
 }
 
 .first-column{
     max-width: 200px;
     font-size: 13px;
+    color: #000000;
 }
 
 .first-column img{
     max-width: 200px;
 }
 
+.first-column a{
+    text-decoration: none;
+}
+
+.first-column a:hover{
+    color: #000000;
+}
+
 .second-column{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bolder;
     max-width: 780px;
+    text-align: center;
 }
 
 .second-column img{
@@ -96,21 +106,24 @@ header #branding h1{
     align-items: center;
 }
 
-.third-column{
-    border-bottom: #5C055C 2px solid;
-    border-top: #5C055C 2px solid;
-    max-width: 340px;
-    align-items: center;
+.second-column a{
+    text-decoration: none;
 }
 
-.third-column img{
-    max-width: 50px;
-    max-height: 50px;
+.second-column a:hover{
+    color: #000000;
+}
+
+.third-column{
+    max-width: 300px;
+    border-bottom: #5C055C 2px solid;
+    border-top: #5C055C 2px solid;
+    padding-bottom: 30px;
 }
 
 .third-column h3{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
 }
 
 .third-column ul{
@@ -119,8 +132,48 @@ header #branding h1{
 
 .third-column li{
     display: inline;
-    padding: 16px;
+    padding: 10px;
 }
+
+.media img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.election-img img{
+    max-width: 300px;
+    padding-top: 10px;
+}
+
+.titles{
+    font-size: 24px;
+    font-family: inherit;
+    border-bottom: #5C055C 2px solid;
+    border-top: #5C055C 2px solid;
+    max-width: 200px;
+}
+
+.articles a{
+    text-decoration: none;
+    font-size: 13px;
+    display:block;
+    border-bottom: #000000 2px solid;
+    padding: 10px;
+}
+
+.articles a:hover{
+    color: #000000;
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    font-size: 12px;
+    border-top: #000000 1px solid;
+}
+
+
 
 
 
