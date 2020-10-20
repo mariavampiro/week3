@@ -1,24 +1,19 @@
 /* Global */
 
-.container{
-    overflow: hidden;
-}
-
 body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     line-height: 1.5;
     background-color:#FFFFFF;
-    width: 100%;
 }
 
 /* Header */
 
 header{
-    background-color: #5C055C;
     color: #000000;
     padding-top: 0;
     border-bottom: #FFFFFF 2px solid;
+    width: 100%;
 }
 
 header ul{
@@ -29,7 +24,6 @@ header ul{
 
 header li{
     display: inline;
-    float: left;
     padding: 0 20px 0 20px;
 }
 
@@ -44,46 +38,49 @@ header a:hover{
 }
 
 header nav{
-    float: left;
     border-top: #FFFFFF 2px solid;
 }
 
 header #branding{
     text-align: center;
-    background: url(../img/header.png);
     padding: 0;
     margin: 0;
     height: 140px;
+    width: 100%;
 }
 
 header #branding h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
+    font-size: 80px;
     color: #000000;
+    width: 100%;
 }
+
+
 
 /* Content*/
 
-.row:after{
+/*.row:after{
     content: "";
     display: table;
     clear: both;
-}
+}*/
 
-.column{
+/*.column{
     float: left;
     width: 33,3%;
-    padding: 10px;
-}
+}*/
+
+/*Mobile First*/
 
 .first-column{
-    max-width: 200px;
+    max-width: 480px;
     font-size: 13px;
     color: #000000;
 }
 
 .first-column img{
-    max-width: 200px;
+    max-width: 480px;
 }
 
 .first-column a{
@@ -97,12 +94,12 @@ header #branding h1{
 .second-column{
     font-size: 30px;
     font-weight: bolder;
-    max-width: 780px;
+    max-width: 480px;
     text-align: center;
 }
 
 .second-column img{
-    max-width: 780px;
+    max-width: 480px;
     align-items: center;
 }
 
@@ -115,7 +112,7 @@ header #branding h1{
 }
 
 .third-column{
-    max-width: 300px;
+    max-width: 480px;
     border-bottom: #5C055C 2px solid;
     border-top: #5C055C 2px solid;
     padding-bottom: 30px;
@@ -141,7 +138,7 @@ header #branding h1{
 }
 
 .election-img img{
-    max-width: 300px;
+    max-width: 480px;
     padding-top: 10px;
 }
 
@@ -150,7 +147,7 @@ header #branding h1{
     font-family: inherit;
     border-bottom: #5C055C 2px solid;
     border-top: #5C055C 2px solid;
-    max-width: 200px;
+    max-width: 480px;
 }
 
 .articles a{
@@ -168,8 +165,11 @@ header #branding h1{
 /* Footer */
 
 footer{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #9B9B9B;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     border-top: #000000 1px solid;
 }
 
