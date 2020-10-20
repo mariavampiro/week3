@@ -1,0 +1,140 @@
+header{
+    color: #000000;
+    padding-top: 0;
+    border-bottom: #FFFFFF 2px solid;
+    width: 100%;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header li{
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header a:hover{
+    color: #000000;
+}
+
+header nav{
+    border-top: #FFFFFF 2px solid;
+}
+
+header #branding{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 140px;
+    width: 100%;
+}
+
+header #branding h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    color: #000000;
+    width: 100%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    background: url(../img/header.png);
+}
+
+.navbar-header{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000; 
+}
+
+.navbar-menu-mobile{
+    color: #AC378F;
+    border: 1px solid #FFFFFF;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-link{
+    color: #000000;
+    font-size: 56px;
+}
+
+.navbar-container{
+    position: absolute;
+    background: #5C055C;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+}
+
+.navbar-link{
+    color: #FFFFFF;
+}
+
+#navbar-header:target .navbar-container{
+    height: 300px;
+}
+
+
+
+@media(min-width:768px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-menu-mobile{
+        display: none;
+    }
+
+    .navbar-container{
+        height: auto;
+        flex-direction: column;
+        position: static;
+        width: 20%;
+        font-size: 24px;
+    }
+}
+
+@media(min-width:1279px){
+    .navbar{
+        display: flex;
+    }
+
+    .navbar-container{
+        height: 30px;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+}
