@@ -155,4 +155,45 @@ body{
     }
 }
 
+@media(min-width:1279px){
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .first-column{
+        max-width: 340px;
+        font-size: 6px;
+    }
+    
+    .first-column img{
+        max-width: 340px;
+    }
+    
+    .second-column{
+        font-size: 30px;
+        max-width: 520px;
+    }
+    
+    .second-column img{
+        max-width: 520px;
+    }
+    
+    .third-column{
+        max-width: 340px;
+        padding-bottom: 30px;
+    }
+    
+    .media img{
+        max-width: 30px;
+        max-height: 30px;
+    }
+    
+    .election-img img{
+        max-width: 340px;
+        padding-top: 10px;
+    }
+}
+
 
