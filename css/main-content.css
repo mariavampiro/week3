@@ -1,13 +1,13 @@
 body{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
     line-height: 1.5;
     background-color:#FFFFFF;
+    color: #000000;
 }
 
 .first-column{
     max-width: 480px;
-    font-size: 13px;
+    font-size: 10px;
     color: #000000;
 }
 
@@ -17,10 +17,11 @@ body{
 
 .first-column a{
     text-decoration: none;
+    color: #000000;
 }
 
 .first-column a:hover{
-    color: #000000;
+    color: #FFFFFF5D;
 }
 
 .second-column{
@@ -37,10 +38,11 @@ body{
 
 .second-column a{
     text-decoration: none;
+    color: #000000;
 }
 
 .second-column a:hover{
-    color: #000000;
+    color: #FFFFFF5D;
 }
 
 .third-column{
@@ -64,6 +66,10 @@ body{
     padding: 10px;
 }
 
+.third-column a{
+    color: #000000;
+}
+
 .media img{
     max-width: 30px;
     max-height: 30px;
@@ -79,7 +85,6 @@ body{
     font-family: inherit;
     border-bottom: #5C055C 2px solid;
     border-top: #5C055C 2px solid;
-    max-width: 480px;
 }
 
 .articles a{
@@ -109,13 +114,45 @@ body{
     order: 3;
 }
 
-
-
-
 @media(min-width:768px){
     .row{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .first-column{
+        max-width: 200px;
+        font-size: 6px;
+    }
+    
+    .first-column img{
+        max-width: 200px;
+    }
+    
+    .second-column{
+        font-size: 30px;
+        max-width: 350px;
+    }
+    
+    .second-column img{
+        max-width: 350px;
+    }
+    
+    .third-column{
+        max-width: 200px;
+        padding-bottom: 30px;
+    }
+    
+    .media img{
+        max-width: 30px;
+        max-height: 30px;
+    }
+    
+    .election-img img{
+        max-width: 200px;
+        padding-top: 10px;
+    }
 }
+
+
