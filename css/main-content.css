@@ -1,0 +1,121 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color:#FFFFFF;
+}
+
+.first-column{
+    max-width: 480px;
+    font-size: 13px;
+    color: #000000;
+}
+
+.first-column img{
+    max-width: 480px;
+}
+
+.first-column a{
+    text-decoration: none;
+}
+
+.first-column a:hover{
+    color: #000000;
+}
+
+.second-column{
+    font-size: 30px;
+    font-weight: bolder;
+    max-width: 480px;
+    text-align: center;
+}
+
+.second-column img{
+    max-width: 480px;
+    align-items: center;
+}
+
+.second-column a{
+    text-decoration: none;
+}
+
+.second-column a:hover{
+    color: #000000;
+}
+
+.third-column{
+    max-width: 480px;
+    border-bottom: #5C055C 2px solid;
+    border-top: #5C055C 2px solid;
+    padding-bottom: 30px;
+}
+
+.third-column h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.third-column ul{
+    list-style: none;
+}
+
+.third-column li{
+    display: inline;
+    padding: 10px;
+}
+
+.media img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.election-img img{
+    max-width: 480px;
+    padding-top: 10px;
+}
+
+.titles{
+    font-size: 24px;
+    font-family: inherit;
+    border-bottom: #5C055C 2px solid;
+    border-top: #5C055C 2px solid;
+    max-width: 480px;
+}
+
+.articles a{
+    text-decoration: none;
+    font-size: 13px;
+    display:block;
+    border-bottom: #000000 2px solid;
+    padding: 10px;
+}
+
+.articles a:hover{
+    color: #000000;
+}
+
+.first-column{
+    flex:1;
+    order: 2;
+}
+
+.second-column{
+    flex:2;
+    order: 1;
+}
+
+.third-column{
+    flex:1;
+    order: 3;
+}
+
+
+
+
+@media(min-width:768px){
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
