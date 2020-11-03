@@ -71,14 +71,24 @@ label{
     margin-top: 0px;
     margin-bottom: 30px;
     display: none;
+    color: #BB2929;
 }
 
 .input-error-active{
     display: block;
 }
 
+.input-error-notactive{
+    display: none;
+}
+
 .wrong-group .label {
 	color: #BB2929;
+}
+
+
+.wrong-group .input {
+	border: 3px solid #bb2929;
 }
 
 

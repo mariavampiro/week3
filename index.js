@@ -31,12 +31,14 @@ function validation (e) {
     switch (e.target.name){
         case 'fullname':
             validateInput(expressions.fullname, e.target, 'fullname');
+            eraseError(expressions.fullname, e.target,'fullname');
         break;
         case 'email':
             validateInput(expressions.email, e.target, 'email');
         break;
         case 'password':
             validateInput(expressions.password, e.target, 'password');
+            validatePassword();
         break;
         case 'repeatpass':
             validatePassword();
@@ -66,7 +68,7 @@ function validateInput(expression,input,field){
     if(expression.test(input.value)){
         document.getElementById(`group-${field}`).classList.remove('wrong-group');
         document.getElementById(`group-${field}`).classList.add('right-group');
-        document.querySelector(`#group-${field} .input-error`).classList.remove('input-error-active');
+        document.querySelector(`#group-${field} .input-error`).classList.add('input-error-notactive');
         fields[field] = true;
     }else{
         document.getElementById(`group-${field}`).classList.add('wrong-group');
@@ -76,8 +78,35 @@ function validateInput(expression,input,field){
     }
 }
 
+function eraseError(expression,input,field){
+    document.querySelector(`#group-${field} .input-error`).classList.add('input-error-notactive');
+}
+
+
+function validatePassword(){
+    const inputPass = document.getElementById('password');
+    const inputRepeatPass = document.getElementById('repeatpass');
+
+    if(inputPass.value !== inputRepeatPass.value){
+        document.getElementById(`group-repeatpass`).classList.add('wrong-group');
+        document.getElementById(`group-repeatpass`).classList.remove('right-group');
+        document.querySelector(`#group-repeatpass .input-error`).classList.add('input-error-active');
+        fields['password'] = true;
+    }else{
+        document.getElementById(`group-repeatpass`).classList.remove('wrong-group');
+        document.getElementById(`group-repeatpass`).classList.add('right-group');
+        document.querySelector(`#group-repeatpass .input-error`).classList.remove('input-error-active');
+        fields['password'] = true;
+    }
+}
+
+
 input.forEach((input) => {
     input.addEventListener('blur', validation);
+});
+
+input.forEach((input) => {
+    input.addEventListener('focus', eraseError);
 });
 
 form.addEventListener('submit', (e) => {
