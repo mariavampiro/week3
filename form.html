@@ -49,41 +49,91 @@
             </ul>
     
         </nav>
+
+        <h2> SUBSCRIBE: </h2>
+
+        <form id="form" class="form" action="">
        
-        <div class="row">
+            <div class="row">
 
-            <div class="column">
-                <div class="column1">
-                    <input type="text" class="form-input" placeholder="Enter full name">
-                    <input type="text" class="form-input" placeholder="Enter email">
-                    <input type="text" class="form-input" placeholder="Enter password">
-                    <input type="text" class="form-input" placeholder="Repeat password">
-                    <input type="text" class="form-input" placeholder="Enter age">
+                <div class="column">
+                    <div class="column1">
+                        <div class="form-group" id="group-fullname">
+                            <label for="fullname" class="label">Full name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter full name">
+                            <p class="input-error"> Full name must have at least 6 letters and a space between </p>
+                        </div>
+                        <div class="form-group" id="group-email">
+                            <label for="email" class="label">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter email">
+                            <p class="input-error"> Not valid email </p>
+                        </div>
+                        <div class="form-group" id="group-password">  
+                            <label for="password" class="label">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter password">
+                            <p class="input-error"> Password must have at least 8 characters (letters and numbers) </p>
+                        </div>
+                        <div class="form-group" id="group-repeatpass">
+                            <label for="repeatpass" class="label">Repeat password</label>
+                            <input type="password" name="repeatpass" id="repeatpass" placeholder="Repeat password">
+                            <p class="input-error"> Password doesn't match </p>
+                        </div>
+                        <div class="form-group" id="group-age">
+                            <label for="age" class="label">Age</label>
+                            <input type="number" name="repeatpass" id="age" placeholder="Enter age">
+                            <p class="input-error"> Enter a valid age between 18 and 100 </p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="column">
+                    <div class="column2">
+                        <div class="form-group" id="group-phone">
+                            <label for="phone" class="label">Phone number</label>
+                            <input type="number" name="phone" id="phone" placeholder="Enter phone number">
+                            <p class="input-error"> Phone number must have at least 7 digits, without spaces or hyphens </p>
+                        </div>
+                        <div class="form-group" id="group-address">
+                            <label for="address" class="label">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Enter address">
+                            <p class="input-error"> Address must have at least 5 characters, with leters, number and a space between </p>
+                        </div>
+                        <div class="form-group" id="group-city">
+                            <label for="city" class="label">City</label>
+                            <input type="text" name="city" id="city" placeholder="Enter city">
+                            <p class="input-error"> City must have at least 3 letters </p>
+                        </div>
+                        <div class="form-group" id="group-zipcode">
+                            <label for="zipcode" class="label">ZIP code</label>
+                            <input type="number" name="zipcode" id="zipcode" placeholder="Enter ZIP code">
+                            <p class="input-error"> Zip code must have at least 3 characteres </p>
+                        </div>
+                        <div class="form-group" id="group-dni">
+                            <label for="dni" class="label">ID</label>
+                            <input type="number" name="dni" id="dni" placeholder="Enter ID">
+                            <p class="input-error"> ID must have 7 or 8 digits </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="column">
-                <div class="column2">
-                    <input type="text" class="form-input" placeholder="Enter phone number">
-                    <input type="text" class="form-input" placeholder="Enter address">
-                    <input type="text" class="form-input" placeholder="Enter city">
-                    <input type="text" class="form-input" placeholder="Enter ZIP code">
-                    <input type="text" class="form-input" placeholder="Enter ID">
-                </div>
+            <div class="msg" id="msg">
+                <p><b>Error:</b> Please fill the form</p>
             </div>
 
-        </div>
+            <div class="button">
+                <input type="submit" class="btn" onclick="return sendform()" value="Send">
+                <p class="success">Form sent</p>
+            </div>
 
-        <div class="button">
-            <input type="text" class="btn" value="Send">
-        </div>
+        </form>
 
         <footer>
             <p>Breaking news!, Copyright &copy; 2020</p>
         </footer>
 
         <script src="index.js"></script>
-        
     </body>
     
 </html>
