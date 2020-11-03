@@ -61,6 +61,7 @@
                             <label for="fullname" class="label">Full name</label>
                             <input class="input" type="text" id="fullname" name="fullname" placeholder="Enter full name">
                             <p class="input-error"> Full name must have at least 6 letters and a space between </p>
+                            <div id="txt"></div>
                         </div>
                         <div class="form-group" id="group-email">
                             <label for="email" class="label">Email</label>
@@ -79,7 +80,7 @@
                         </div>
                         <div class="form-group" id="group-age">
                             <label for="age" class="label">Age</label>
-                            <input class="input" type="number" name="repeatpass" id="age" placeholder="Enter age">
+                            <input class="input" type="number" name="age" id="age" placeholder="Enter age">
                             <p class="input-error"> Enter a valid age between 18 and 100 </p>
                         </div>
                     </div>
@@ -120,11 +121,11 @@
             <div class="message" id="message">
 				<p><b>Error:</b> Please fill the form. </p>
 			</div>
-            
-            <div class="button">
-                <input type="submit" class="btn" onclick="return sendform()" value="Send">
-                <p class="success" id="success">Form sent successfully</p>
-            </div>
+
+			<div class="group-btn-send">
+				<button type="submit" class="btn">Send</button>
+				<p class="success" id="success">Form has been sent successfully</p>
+			</div>
 
         </form>
 

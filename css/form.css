@@ -58,14 +58,6 @@ label{
     margin-left: 120px;
 }
 
-.button{
-    max-width: 480px;
-    font-size: 30px;
-    color: #FFFFFF;
-    text-align: center;
-    align-items: center;
-}
-
 .input-error{
     font-size: 12px;
     margin-top: 0px;
@@ -102,20 +94,37 @@ label{
 }
 
 .message{
-	height: 45px;
-	line-height: 45px;
+	height: 30px;
+    line-height: 30px;
+    width: 450px;
+    text-align: center;
 	background: #F66060;
 	padding: 0 15px;
 	border-radius: 3px;
-	display: none;
+    opacity: 0;
 }
 
-.message.active{
+.message-active{
 	opacity: 1;
 }
 
 .message p {
 	margin: 0;
+}
+
+.group-btn-send{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    max-width: 480px;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
 }
 
 
@@ -149,6 +158,12 @@ label{
         text-align: center;
         margin-bottom: 130px;
     }
+
+    .message{
+        height: 50px;
+        line-height: 50px;
+        width: 760px;
+    }
 }
 
 @media(min-width:1279px){
@@ -179,5 +194,11 @@ label{
         align-items: center;
         text-align: center;
         margin-bottom: 140px;
+    }
+
+    .message{
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
     }
 }

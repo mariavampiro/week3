@@ -26,7 +26,7 @@ const fields = {
 
 function validation (e) {
     e.preventDefault();
-    console.log(e.target.value);
+    /*console.log(e.target.value);*/
     switch (e.target.name){
         case 'fullname':
             validateInput(expressions.fullname, e.target, 'fullname');
@@ -103,8 +103,7 @@ function validatePassword(){
 
 function validateAge(){
     const inputAge = document.getElementById('age');
-    console.log(inputAge);
-    if(inputAge.value <18 || inputAge.value>100){
+    if(!(inputAge.value >=18 && inputAge.value<100)) {
         document.getElementById(`group-age`).classList.add('wrong-group');
         document.getElementById(`group-age`).classList.remove('right-group');
         document.querySelector(`#group-age .input-error`).classList.add('input-error-active');
@@ -130,25 +129,12 @@ input.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(fields);
 
     if(fields.fullname && fields.email && fields.password && fields.age && fields.phone && fields.address && fields.city && fields.zipcode && fields.dni){
         form.reset();
-
         document.getElementById('success').classList.add('success-active');
     }else{
     document.getElementById('message').classList.add('message-active');
     }    
 });
 
-function runEvent(e){
-    console.log('Event type: '+e.type);
-}
-
-
-
-
-function sendform(){
-    alert('Please complete the form correctly');
-    return false;
-}
