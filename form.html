@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/form.css">
         <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/form.css">
         <link rel="stylesheet" href="./css/footer.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Subscribe</title>
@@ -118,13 +117,13 @@
 
             </div>
 
-            <div class="msg" id="msg">
-                <p><b>Error:</b> Please fill the form</p>
-            </div>
-
+            <div class="message" id="message">
+				<p><b>Error:</b> Please fill the form. </p>
+			</div>
+            
             <div class="button">
                 <input type="submit" class="btn" onclick="return sendform()" value="Send">
-                <p class="success">Form sent</p>
+                <p class="success" id="success">Form sent successfully</p>
             </div>
 
         </form>

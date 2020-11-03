@@ -1,11 +1,10 @@
 const form = document.getElementById('form');
-const input = document.querySelectorAll('#form input');
+const input = document.querySelectorAll('#form .input');
 
 const expressions = {
     fullname: /^[a-zA-ZÀ-ÿ\s]{6,40}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     password: /^[a-zA-Z0-9]{8,20}$/,
-    age: /^\d{2}$/,
     phone: /^\d{7,15}$/,
     address: /^[a-zA-Z0-9-ÿ\s]{1,40}$/,
     city: /^[a-zA-Z0-9]{3,20}$/,
@@ -22,7 +21,7 @@ const fields = {
     address: false,
     city: false,
     zipcode: false,
-    dni: false,
+    dni: false
 }
 
 function validation (e) {
@@ -31,7 +30,6 @@ function validation (e) {
     switch (e.target.name){
         case 'fullname':
             validateInput(expressions.fullname, e.target, 'fullname');
-            eraseError(expressions.fullname, e.target,'fullname');
         break;
         case 'email':
             validateInput(expressions.email, e.target, 'email');
@@ -44,7 +42,7 @@ function validation (e) {
             validatePassword();
         break;
         case 'age':
-            validateInput(expressions.age, e.target, 'age');
+            validateAge();
         break;
         case 'phone':
             validateInput(expressions.phone, e.target, 'phone');
@@ -73,13 +71,15 @@ function validateInput(expression,input,field){
     }else{
         document.getElementById(`group-${field}`).classList.add('wrong-group');
         document.getElementById(`group-${field}`).classList.remove('right-group');
+        document.querySelector(`#group-${field} .input-error`).classList.remove('input-error-notactive');
         document.querySelector(`#group-${field} .input-error`).classList.add('input-error-active');
         fields[field] = false;
     }
 }
 
-function eraseError(expression,input,field){
-    document.querySelector(`#group-${field} .input-error`).classList.add('input-error-notactive');
+function eraseError(e){
+    document.querySelector(`#group-${e.target.id} .input-error`).classList.add('input-error-notactive');
+    document.querySelector(`#group-${e.target.id} .input-error`).classList.remove('input-error-active');
 }
 
 
@@ -91,12 +91,30 @@ function validatePassword(){
         document.getElementById(`group-repeatpass`).classList.add('wrong-group');
         document.getElementById(`group-repeatpass`).classList.remove('right-group');
         document.querySelector(`#group-repeatpass .input-error`).classList.add('input-error-active');
-        fields['password'] = true;
+        document.querySelector(`#group-repeatpass .input-error`).classList.remove('input-error-notactive');
+        fields['password'] = false;
     }else{
         document.getElementById(`group-repeatpass`).classList.remove('wrong-group');
         document.getElementById(`group-repeatpass`).classList.add('right-group');
         document.querySelector(`#group-repeatpass .input-error`).classList.remove('input-error-active');
         fields['password'] = true;
+    }
+}
+
+function validateAge(){
+    const inputAge = document.getElementById('age');
+    console.log(inputAge);
+    if(inputAge.value <18 || inputAge.value>100){
+        document.getElementById(`group-age`).classList.add('wrong-group');
+        document.getElementById(`group-age`).classList.remove('right-group');
+        document.querySelector(`#group-age .input-error`).classList.add('input-error-active');
+        document.querySelector(`#group-age .input-error`).classList.remove('input-error-notactive');
+        fields['age'] = false;
+    }else{
+        document.getElementById(`group-age`).classList.remove('wrong-group');
+        document.getElementById(`group-age`).classList.add('right-group');
+        document.querySelector(`#group-age .input-error`).classList.remove('input-error-active');
+        fields['age'] = true;
     }
 }
 
@@ -109,8 +127,18 @@ input.forEach((input) => {
     input.addEventListener('focus', eraseError);
 });
 
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    console.log(fields);
+
+    if(fields.fullname && fields.email && fields.password && fields.age && fields.phone && fields.address && fields.city && fields.zipcode && fields.dni){
+        form.reset();
+
+        document.getElementById('success').classList.add('success-active');
+    }else{
+    document.getElementById('message').classList.add('message-active');
+    }    
 });
 
 function runEvent(e){
@@ -121,6 +149,6 @@ function runEvent(e){
 
 
 function sendform(){
-    alert();
+    alert('Please complete the form correctly');
     return false;
 }

@@ -70,25 +70,52 @@ label{
     font-size: 12px;
     margin-top: 0px;
     margin-bottom: 30px;
-    display: none;
+    opacity: 0;
     color: #BB2929;
 }
 
 .input-error-active{
-    display: block;
+    opacity: 1;
 }
 
 .input-error-notactive{
-    display: none;
+    opacity: 0;
 }
 
-.wrong-group .label {
+.wrong-group .label{
 	color: #BB2929;
 }
 
 
-.wrong-group .input {
+.wrong-group .input{
 	border: 3px solid #bb2929;
+}
+
+.success{
+	font-size: 14px;
+	color: #119200;
+	opacity: 0;
+}
+
+.success-active{
+	opacity: 1;
+}
+
+.message{
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.message.active{
+	opacity: 1;
+}
+
+.message p {
+	margin: 0;
 }
 
 
